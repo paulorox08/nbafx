@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox fx:controller="controller.TeamsRoundController" styleClass="background"  alignment="CENTER" prefHeight="400" prefWidth="800" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <Label text="${'Round: ' + controller.round}" styleClass="label-h2"/>
+    <HBox alignment="CENTER" spacing="10" fx:id="container"> 
+        <ListView fx:id="roundLv" maxWidth="230" items="${controller.teams}" maxHeight="250"/>
+        <Button text=">>>" fx:id="transferButton" onAction="#handleTransfer" />
+        <TableView fx:id="roundTv" maxHeight="250" minWidth="300" styleClass="table-view" items="${controller.schedule}">
+            <columns>
+                <TableColumn fx:id="gameCol" text="Game" minWidth="100">
+                    <cellValueFactory><PropertyValueFactory property="term"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="team1Col" text="Team-1" minWidth="100">
+                    <cellValueFactory><PropertyValueFactory property="currentTeams"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Team-2" minWidth="100">
+                    <cellValueFactory><PropertyValueFactory property="team2"/></cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </HBox>
+    <Button text="Arrange Season" fx:id="arrangeSeasonButton" maxHeight="40" styleClass="button" onAction="#handleClose"/>
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

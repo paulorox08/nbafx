@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox spacing="10" fx:controller="controller.ViewPlayersController" alignment="CENTER" minHeight="710" minWidth="1000" xmlns:fx="http://javafx.com/fxml/1"  styleClass="background">
+    
+    <Label text="All Players" styleClass="label-h2"/>
+    
+    <TableView fx:id="playersTv" maxWidth="1000" maxHeight="400" styleClass="table-view" items="${controller.list}">
+        <columns>
+            <TableColumn text="Team" prefWidth="164">
+                <cellValueFactory><PropertyValueFactory property="team"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player Name" prefWidth="164">
+                <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player Credit" prefWidth="164">
+                <cellValueFactory><PropertyValueFactory property="credit"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player Age" prefWidth="164">
+                <cellValueFactory><PropertyValueFactory property="age"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player No" prefWidth="164">
+                <cellValueFactory><PropertyValueFactory property="no"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player Level" prefWidth="164">
+                <cellValueFactory><PropertyValueFactory property="level"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    
+    <Label text="Filter" styleClass="label-h2"/>
+    
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Filter By Level:" styleClass="label"/>
+        <TextField styleClass="text-field" fx:id="levelTf"/>
+        <Label text="Filter By Name:" styleClass="label"/>
+        <TextField styleClass="text-field" fx:id="nameTf"/>
+    </HBox>
+    
+    <Label text="Filter By Age:"/>
+    
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="From:" styleClass="label"/>
+        <TextField styleClass="text-field" text="0" fx:id="ageFromTf"/>
+        <Label text="To:" styleClass="label"/>
+        <TextField styleClass="text-field" text="0" fx:id="ageToTf"/>
+    </HBox>
+    
+    <Button text="Close" styleClass="button" maxWidth="150" maxHeight="59" fx:id="closeButton" onAction="#close"/>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+    
+</VBox>

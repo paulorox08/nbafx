@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox spacing="5" fx:controller="controller.ManageTeamController" alignment="CENTER" prefHeight="420.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1"  styleClass="background">
+
+    <HBox alignment="CENTER" style="-fx-padding: 5 0 0 0">
+        <Label styleClass="label" text="Team Name: "/>
+        <TextField fx:id="teamTf" styleClass="text-field" text=""/>
+    </HBox>
+   <TableView fx:id="teamTv" styleClass="table-view" maxWidth="600" prefHeight="330" items="${controller.stuff}">
+        <columns>
+            <TableColumn text="Player Name" prefWidth="130" >
+                <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player Credit" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="credit"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player Age" prefWidth="180">
+                <cellValueFactory><PropertyValueFactory property="age"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player No" prefWidth="140">
+                <cellValueFactory><PropertyValueFactory property="no"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <HBox prefHeight="90" prefWidth="600" style="-fx-padding: 0 5 10 5" spacing="10">
+        <Button styleClass="button" fx:id="addButton" GridPane.columnIndex="0"  GridPane.rowIndex="0" text="Add" onAction="#handleAdd"/>
+        <Button styleClass="button" fx:id="updateButton" GridPane.columnIndex="0"  GridPane.rowIndex="0" text="Update" onAction="#handleUpdate"/>
+        <Button styleClass="button" fx:id="deleteButton" GridPane.columnIndex="0"  GridPane.rowIndex="0" text="Delete" onAction="#handleDelete"/>
+        <Button styleClass="button" fx:id="closeButton" GridPane.columnIndex="0"  GridPane.rowIndex="0" text="Save and Close" onAction="#close"/>
+    </HBox>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+    
+</VBox>
+

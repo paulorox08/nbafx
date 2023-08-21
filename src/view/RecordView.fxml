@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox fx:controller="controller.RecordController" styleClass="background"  alignment="CENTER" prefHeight="350" prefWidth="500" spacing="20" style="-fx-padding: 0 5 10 5" xmlns:fx="http://javafx.com/fxml/1" >
+   
+   <Label text="Season Record" styleClass="label-header"/>
+   
+    <TableView fx:id="roundTv" styleClass="table-view" maxWidth="500" items="${controller.record}">
+        <columns>
+            <TableColumn fx:id="roundCol" text="Round" minWidth="125">
+                <cellValueFactory><PropertyValueFactory property="round"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="gameCol" text="Game" minWidth="125">
+                <cellValueFactory><PropertyValueFactory property="gameNumber"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="winnerCol" text="Winning Team" minWidth="125">
+                <cellValueFactory><PropertyValueFactory property="winTeam"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="loserCol" text="Losing Team" minWidth="125">
+                <cellValueFactory><PropertyValueFactory property="loseTeam"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    
+    <Button fx:id="closeButton" text="Close" styleClass="button" maxHeight="40" onAction="#handleClose"/>
+   
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<VBox  alignment="CENTER" fx:controller="controller.ExploreTeamsController" styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20"
+       xmlns:fx="http://javafx.com/fxml/1"
+       >
+    
+    <ImageView fitHeight="240" fitWidth="600">
+        <image>
+            <Image url="@NBA_Back.jpg"/>
+        </image>
+    </ImageView>
+    
+    <GridPane fx:id="buttonGrid" style="-fx-padding: 0 5 10 5" alignment="CENTER" hgap="20" vgap="20" minWidth="600" maxHeight="200"  xmlns:fx="http://javafx.com/fxml/">
+        <Button styleClass="button" fx:id="teamsMenuButton" GridPane.columnIndex="0"  GridPane.rowIndex="0" text="Teams Menu" onAction="#teamsMenu"/>
+        <Button styleClass="button" fx:id="viewPlayersButton" GridPane.columnIndex="2" GridPane.rowIndex="0"  text="View Players" onAction="#viewPlayers"/>
+        <Button styleClass="button" fx:id="closeButton" GridPane.columnIndex="1" GridPane.rowIndex="1" text="Close" onAction="#close"/>
+    </GridPane>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
+
