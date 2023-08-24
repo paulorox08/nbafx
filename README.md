@@ -1,8 +1,8 @@
-# nbafx
-NBA game with GUI
+# NBA Management Game
+NBA game with GUI created using Java and JavaFX
 
 ## Description
-This is a simple application created using Java and JavaFX to simulate the management of an NBA season.
+This is an application created on NetBeans using Java and JavaFX to simulate the management of an NBA season.
 
 The classes found in the "model" folder contain the methods and functions required to complete the tasks of the application.
 
