@@ -1,5 +1,5 @@
 # NBA Management Game
-NBA game with GUI created using Java and JavaFX
+:basketball:	NBA game with GUI created using Java and JavaFX
 
 ## Description
 This is an application created on NetBeans using Java and JavaFX to simulate the management of an NBA season.
