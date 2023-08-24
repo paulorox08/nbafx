@@ -1,7 +1,7 @@
 # :basketball:	NBA Management Game
 NBA game with GUI created using Java and JavaFX
 
-## Description
+## :book: Description
 This is an application created on NetBeans using Java and JavaFX to simulate the management of an NBA season.
 
 The classes found in the "model" folder contain the methods and functions required to complete the tasks of the application.
@@ -10,11 +10,11 @@ The fxml files in the "view" folder create the visual aspects of the application
 
 The controller files found in the "controller" folder tie the classes and fxml files together to create a functional application. 
 
-## How to Run
+## :runner: How to Run
 
 To run the application, you will need Java installed on your computer. After installing Java, simply head into the "dist" directory and open the "nbafx.jar" file. 
 
-## How to Use
+## :arrow_forward: How to Use
 
 Upon opening the file, there are two main options - explore teams or arrange new season. 
 
